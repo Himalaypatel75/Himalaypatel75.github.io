@@ -1,100 +1,1367 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Himalay Patel | Resume</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Himalay Patel | AI/ML Developer & Full Stack Engineer</title>
+    <meta name="description" content="Himalay Patel - Senior Python AI/ML Developer specializing in LangChain, Django, and Full Stack Development">
+    <meta name="keywords" content="Python, AI/ML, LangChain, Django, Full Stack Developer, DevOps">
+    <meta name="author" content="Himalay Patel">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <style>
+        :root {
+            --primary-color: #3b82f6;
+            --secondary-color: #1e40af;
+            --text-color: #1f2937;
+            --light-text: #6b7280;
+            --bg-color: #f9fafb;
+            --card-bg: #ffffff;
+            --border-radius: 0.5rem;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 0.5rem 0;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .hero {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: white;
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+        
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .section-title p {
+            color: var(--light-text);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .about-image {
+            text-align: center;
+        }
+        
+        .about-image img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary-color);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-text h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .skill-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+        
+        .experience-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background-color: var(--primary-color);
+        }
+        
+        .timeline-item {
+            margin-bottom: 2rem;
+            position: relative;
+            width: 50%;
+            padding-right: 2rem;
+        }
+        
+        .timeline-item:nth-child(even) {
+            margin-left: 50%;
+            padding-right: 0;
+            padding-left: 2rem;
+        }
+        
+        .timeline-content {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: -15px;
+            width: 20px;
+            height: 20px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content::before {
+            right: auto;
+            left: -15px;
+        }
+        
+        .timeline-date {
+            position: absolute;
+            top: 20px;
+            right: -120px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-date {
+            right: auto;
+            left: -120px;
+        }
+        
+        .projects-grid {
+            display: flex;
+            overflow-x: auto;
+            gap: 2rem;
+            padding-bottom: 1.5rem;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            position: relative;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE and Edge */
+        }
+        
+        .projects-grid::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+        
+        .project-navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1.5rem;
+            gap: 1rem;
+        }
+        
+        .project-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .project-nav-btn:hover {
+            background-color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+        
+        .project-dots {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .project-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(59, 130, 246, 0.3);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .project-dot.active {
+            background-color: var(--primary-color);
+            transform: scale(1.2);
+        }
+        
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            flex: 0 0 350px;
+            scroll-snap-align: start;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+        }
+        
+        .project-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-content p {
+            color: var(--light-text);
+            margin-bottom: 1rem;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .project-tag {
+            background-color: rgba(59, 130, 246, 0.1);
+            color: var(--primary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+        }
+        
+        .recommendations-grid {
+            display: flex;
+            overflow-x: auto;
+            gap: 2rem;
+            padding-bottom: 1.5rem;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE and Edge */
+        }
+        
+        .recommendations-grid::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+        
+        .recommendation-navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1.5rem;
+            gap: 1rem;
+        }
+        
+        .recommendation-nav-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .recommendation-nav-btn:hover {
+            background-color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+        
+        .recommendation-dots {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .recommendation-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(59, 130, 246, 0.3);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .recommendation-dot.active {
+            background-color: var(--primary-color);
+            transform: scale(1.2);
+        }
+        
+        .recommendation-card {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            position: relative;
+            flex: 0 0 350px;
+            scroll-snap-align: start;
+        }
+        
+        .recommendation-card::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 5rem;
+            color: rgba(59, 130, 246, 0.1);
+            font-family: serif;
+        }
+        
+        .recommendation-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .recommendation-text {
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        
+        .recommendation-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .recommendation-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .author-info p {
+            color: var(--light-text);
+            font-size: 0.875rem;
+        }
+        
+        footer {
+            background-color: var(--text-color);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .footer-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-social a {
+            color: white;
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+        
+        .footer-social a:hover {
+            color: var(--primary-color);
+        }
+        
+        .copyright {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.875rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            nav {
+                width: 100%;
+                margin-top: 1rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin-left: 0;
+                margin-bottom: 0.5rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                margin-top: 1rem;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                margin-bottom: 2rem;
+            }
+            
+            .experience-timeline::before {
+                left: 0;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-right: 0;
+                padding-left: 2rem;
+            }
+            
+            .timeline-item:nth-child(even) {
+                margin-left: 0;
+                padding-left: 2rem;
+            }
+            
+            .timeline-content::before {
+                left: -15px;
+            }
+            
+            .timeline-item:nth-child(even) .timeline-content::before {
+                left: -15px;
+            }
+            
+            .timeline-date {
+                left: 0;
+                top: -30px;
+            }
+            
+            .timeline-item:nth-child(even) .timeline-date {
+                left: 0;
+            }
+        }
+        
+        .project-date {
+            font-size: 0.875rem;
+            color: var(--light-text);
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
-
-    <header class="bg-blue-900 text-white py-6">
-        <div class="container mx-auto flex justify-between items-center px-4">
-            <h1 class="text-3xl font-bold">Himalay Patel</h1>
-            <p class="text-lg">Senior Python Tech Lead</p>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">Himalay Patel</div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#recommendations">Recommendations</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </header>
 
-    <section class="container mx-auto px-4 py-8">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <!-- Profile and contact -->
-            <div class="bg-white shadow-lg rounded-lg p-6">
-                <h2 class="text-xl font-semibold mb-4">Profile</h2>
-                <p>Highly skilled and motivated Python developer with 4 years of professional experience. Expert in building scalable applications using technologies like Django, Flask, FastAPI, LangChain, and more.</p>
-                
-                <div class="mt-6">
-                    <h3 class="font-semibold">Contact</h3>
-                    <p>Email: <a href="mailto:himalaypatel75@gmail.com" class="text-blue-600">himalaypatel75@gmail.com</a></p>
-                    <p>Phone: +91 9624788668</p>
-                    <p>LinkedIn: <a href="https://www.linkedin.com/in/himalay-patel-python-dev/" class="text-blue-600">LinkedIn Profile</a></p>
-                    <p>GitHub: <a href="https://github.com/Himalaypatel75" class="text-blue-600">GitHub Profile</a></p>
-                </div>
+    <section class="hero">
+        <div class="container hero-content">
+            <h1 data-aos="fade-up">Himalay Patel</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Senior Python AI/ML Developer & Full Stack Engineer</p>
+            <div data-aos="fade-up" data-aos-delay="400">
+                <a href="#about" class="btn">Learn More</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
             </div>
-
-            <!-- Skills -->
-            <div class="bg-white shadow-lg rounded-lg p-6">
-                <h2 class="text-xl font-semibold mb-4">Skills</h2>
-                <ul class="list-disc list-inside">
-                    <li>Python, HTML5, CSS, JavaScript, Bash Scripting</li>
-                    <li>Django REST, Flask, FastAPI, LangChain, LlamaIndex</li>
-                    <li>Azure, AWS, Google Cloud, Jenkins, Docker</li>
-                    <li>Postman, GitHub, BitBucket, PyCharm</li>
-                </ul>
-            </div>
-
-            <!-- Education -->
-            <div class="bg-white shadow-lg rounded-lg p-6">
-                <h2 class="text-xl font-semibold mb-4">Education</h2>
-                <p>Bachelor of Engineering (CGPA: 7.5)</p>
-                <p>Gujarat Technological University</p>
-            </div>
-        </div>
-
-        <!-- Experience -->
-        <div class="mt-12 bg-white shadow-lg rounded-lg p-6">
-            <h2 class="text-2xl font-semibold mb-4">Experience</h2>
-            <ul class="space-y-6">
-                <li>
-                    <h3 class="font-bold text-xl">Senior Lead Software Engineer</h3>
-                    <p class="text-gray-600">Skylink Infosolutions | Dec 2022 - Present</p>
-                </li>
-                <li>
-                    <h3 class="font-bold text-xl">Senior Full Stack Developer</h3>
-                    <p class="text-gray-600">XDuce Technologies | Oct 2021 - Dec 2022</p>
-                </li>
-                <li>
-                    <h3 class="font-bold text-xl">Junior Full Stack Developer</h3>
-                    <p class="text-gray-600">Rushkar Technology | May 2020 - Oct 2021</p>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Projects -->
-        <div class="mt-12 bg-white shadow-lg rounded-lg p-6">
-            <h2 class="text-2xl font-semibold mb-4">Projects</h2>
-            <ul class="space-y-6">
-                <li>
-                    <h3 class="font-bold text-xl">Algo Trading Software</h3>
-                    <p>Designed and developed algo trading software using Python, Django, Azure, Celery, and Websockets.</p>
-                </li>
-                <li>
-                    <h3 class="font-bold text-xl">Hospital Management System</h3>
-                    <p>Developed a complete healthcare solution using Django REST, Celery, GraphQL, and Docker.</p>
-                </li>
-                <li>
-                    <h3 class="font-bold text-xl">Cockpit AI</h3>
-                    <p>Implemented AI-driven question-answering system using LangChain and LlamaIndex.</p>
-                </li>
-                <!-- Add more projects as needed -->
-            </ul>
         </div>
     </section>
 
-    <footer class="bg-blue-900 text-white text-center py-4 mt-12">
-        <p>&copy; 2024 Himalay Patel | All rights reserved</p>
+    <section id="about">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>About Me</h2>
+                <p>Get to know more about my background and expertise</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-right">
+                    <img src="https://user-images.githubusercontent.com/76244600/130684066-fb0b5e47-6c93-469e-ba45-7cb62833b965.png" alt="Himalay Patel">
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <h3>AI/ML Developer & Full Stack Engineer</h3>
+                    <p>Experienced Full Stack Developer specializing in AI/ML solutions using Python, LangChain, and Django. Passionate about creating intelligent applications with a focus on NLP, AGENTIC FLOW, and RAG systems.</p>
+                    <p>With over 5 years of experience in the industry, I've worked on various projects ranging from AI-driven chatbots to complex backend systems. My expertise includes building scalable applications, integrating LLMs, and implementing efficient data processing pipelines.</p>
+                    <div class="social-links">
+                        <a href="mailto:himalaypatel75@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:+919624788668"><i class="fas fa-phone"></i></a>
+                        <a href="https://github.com/Himalaypatel75"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/himalay-patel-python-dev/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Skills & Technologies</h2>
+                <p>Technologies and tools I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card" data-aos="fade-up">
+                    <div class="skill-icon"><i class="fab fa-python"></i></div>
+                    <div>
+                        <h3>Python</h3>
+                        <p>Core programming language for all my development work</p>
+                    </div>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                    <div>
+                        <h3>AI/ML</h3>
+                        <p>Building intelligent systems with NLP and machine learning</p>
+                    </div>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <div>
+                        <h3>Django</h3>
+                        <p>Web framework for building robust backend systems</p>
+                    </div>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-icon"><i class="fas fa-bolt"></i></div>
+                    <div>
+                        <h3>FastAPI</h3>
+                        <p>Modern, fast web framework for building APIs</p>
+                    </div>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                    <div>
+                        <h3>LangChain</h3>
+                        <p>Framework for developing LLM-powered applications</p>
+                    </div>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <div>
+                        <h3>Vector Databases</h3>
+                        <p>Chroma DB, Pinecone for efficient data storage and retrieval</p>
+                    </div>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="skill-icon"><i class="fab fa-docker"></i></div>
+                    <div>
+                        <h3>Docker</h3>
+                        <p>Containerization for consistent deployment</p>
+                    </div>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="skill-icon"><i class="fas fa-cogs"></i></div>
+                    <div>
+                        <h3>DevOps</h3>
+                        <p>CI/CD, Jenkins, and cloud deployment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Work Experience</h2>
+                <p>My professional journey</p>
+            </div>
+            <div class="experience-timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <h3>Sr. Python AI/ML Developer</h3>
+                        <h4>NinjaTech</h4>
+                        <p>Leading development of intelligent solutions using Django, FastAPI, and microservices architecture. Specializing in LLM integration and agentic flows with LangChain and LlamaIndex.</p>
+                    </div>
+                    <div class="timeline-date">Jul 2024 - Present</div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <h3>Back End Developer - II</h3>
+                        <h4>Qilin Lab</h4>
+                        <p>Designing and developing scalable backend systems using Django and FastAPI, building clean APIs, and managing microservices.</p>
+                    </div>
+                    <div class="timeline-date">Sep 2023 - Jul 2024</div>
+                </div>
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <h3>Senior Lead Software Engineer</h3>
+                        <h4>Skylink Infosolutions™</h4>
+                        <p>Developed LangChain's LLM Base Application, utilized Python and Django REST for robust backend services.</p>
+                    </div>
+                    <div class="timeline-date">Dec 2022 - Sep 2023</div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <h3>Sr. Full Stack Developer</h3>
+                        <h4>XDuce</h4>
+                        <p>Worked on various full-stack projects using Python, Django, and frontend technologies.</p>
+                    </div>
+                    <div class="timeline-date">Oct 2021 - Dec 2022</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Projects</h2>
+                <p>Some of my recent work</p>
+            </div>
+            <div class="projects-grid" id="projectsGrid">
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-image">
+                        <img src="https://user-images.githubusercontent.com/76244600/130684066-fb0b5e47-6c93-469e-ba45-7cb62833b965.png" alt="ALGO TRADING SOFTWARE">
+                    </div>
+                    <div class="project-content">
+                        <h3>ALGO TRADING SOFTWARE</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">FastAPI</span>
+                            <span class="project-tag">Django REST</span>
+                            <span class="project-tag">PostgreSQL</span>
+                        </div>
+                        <p>Algorithmic trading software that automates buying and selling securities using predefined algorithms to analyze market data and execute trades based on strategic rules.</p>
+                        <p class="project-date">Feb 2023 - Sep 2023 | Skylink Infosolutions™</p>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="https://user-images.githubusercontent.com/76244600/130684066-fb0b5e47-6c93-469e-ba45-7cb62833b965.png" alt="COCPIT-AI POWERED BY LAMAINDEX | OPEN-AI">
+                    </div>
+                    <div class="project-content">
+                        <h3>COCPIT-AI POWERED BY LAMAINDEX | OPEN-AI</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">LangChain</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">OpenAI</span>
+                            <span class="project-tag">Django REST</span>
+                            <span class="project-tag">LLM</span>
+                        </div>
+                        <p>AI-powered system that provides answers to questions based on client databases, using natural language processing to analyze data and identify trends for business insights.</p>
+                        <p class="project-date">Jul 2023 - Sep 2023 | Skylink Infosolutions™</p>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="https://user-images.githubusercontent.com/76244600/130684066-fb0b5e47-6c93-469e-ba45-7cb62833b965.png" alt="WAREHOUSE MANAGEMENT">
+                    </div>
+                    <div class="project-content">
+                        <h3>WAREHOUSE MANAGEMENT</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Docker</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Django REST</span>
+                            <span class="project-tag">Postman API</span>
+                        </div>
+                        <p>Comprehensive system for inventory, price, user, and customer management that optimizes warehouse operations and streamlines supply chain processes.</p>
+                        <p class="project-date">Mar 2022 - Apr 2023</p>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="https://user-images.githubusercontent.com/76244600/130684066-fb0b5e47-6c93-469e-ba45-7cb62833b965.png" alt="HOSPITAL MANAGEMENT">
+                    </div>
+                    <div class="project-content">
+                        <h3>HOSPITAL MANAGEMENT</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">GraphQL</span>
+                            <span class="project-tag">Docker</span>
+                            <span class="project-tag">Django</span>
+                            <span class="project-tag">Celery</span>
+                        </div>
+                        <p>Complete healthcare facility solution with patient management, appointment scheduling, medical records, billing, inventory, and staff management features.</p>
+                        <p class="project-date">Dec 2022 - Jan 2023 | Skylink Infosolutions™</p>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <img src="https://user-images.githubusercontent.com/76244600/130684066-fb0b5e47-6c93-469e-ba45-7cb62833b965.png" alt="PYTHON-AUTOMATION SCRIPTS FOR MARKET DATA PROVIDER">
+                    </div>
+                    <div class="project-content">
+                        <h3>PYTHON-AUTOMATION SCRIPTS FOR MARKET DATA PROVIDER</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Docker</span>
+                            <span class="project-tag">Jenkins</span>
+                            <span class="project-tag">SonarQube</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Web Scraping</span>
+                            <span class="project-tag">JAMS</span>
+                            <span class="project-tag">Bitbucket</span>
+                        </div>
+                        <p>Automation scripts for market data provisioning using Docker, Jenkins, and web scraping to accelerate data retrieval and processing for financial markets.</p>
+                        <p class="project-date">Mar 2022 - Dec 2022 | XDuce</p>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-image">
+                        <img src="https://user-images.githubusercontent.com/76244600/130684066-fb0b5e47-6c93-469e-ba45-7cb62833b965.png" alt="QUESTION BANK (ASSESSMENT TOOL)">
+                    </div>
+                    <div class="project-content">
+                        <h3>QUESTION BANK (ASSESSMENT TOOL)</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Angular</span>
+                            <span class="project-tag">Docker</span>
+                            <span class="project-tag">Django REST</span>
+                        </div>
+                        <p>Internal recruitment tool that allows recruiters to generate exam credentials for candidates and receive scores directly for data-driven hiring decisions.</p>
+                        <p class="project-date">Oct 2021 - Mar 2022 | XDuce</p>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-image">
+                        <img src="https://user-images.githubusercontent.com/76244600/130684066-fb0b5e47-6c93-469e-ba45-7cb62833b965.png" alt="PART-KART MANAGEMENT TOOL">
+                    </div>
+                    <div class="project-content">
+                        <h3>PART-KART MANAGEMENT TOOL</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Spring Boot</span>
+                            <span class="project-tag">MySQL</span>
+                            <span class="project-tag">Core Java</span>
+                            <span class="project-tag">JSP</span>
+                        </div>
+                        <p>B2B platform for buying and selling automobile parts with search functionality, secure payment gateway, and analytics tools for tracking sales and market trends.</p>
+                        <p class="project-date">Aug 2020 - Dec 2020</p>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="project-image">
+                        <img src="https://user-images.githubusercontent.com/76244600/130684066-fb0b5e47-6c93-469e-ba45-7cb62833b965.png" alt="POC FOR FINTECH CLIENT IN RETOOL">
+                    </div>
+                    <div class="project-content">
+                        <h3>POC FOR FINTECH CLIENT IN RETOOL</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">MySQL</span>
+                            <span class="project-tag">Retool</span>
+                        </div>
+                        <p>Retool app for retrieving stock ticker data from Alpha Vantage API with SQL database storage and dynamic line chart visualization of stock performance.</p>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="800">
+                    <div class="project-image">
+                        <img src="https://user-images.githubusercontent.com/76244600/130684066-fb0b5e47-6c93-469e-ba45-7cb62833b965.png" alt="STREAMLIT CHATBOT AND DATA INSIGHTS PROJECT">
+                    </div>
+                    <div class="project-content">
+                        <h3>STREAMLIT CHATBOT AND DATA INSIGHTS PROJECT</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">LangChain</span>
+                            <span class="project-tag">LLM</span>
+                            <span class="project-tag">OpenAI</span>
+                            <span class="project-tag">Vector Databases</span>
+                            <span class="project-tag">Python</span>
+                        </div>
+                        <p>Dynamic chatbot and data insights application using Streamlit, LangChain, and Chroma DB with natural language processing capabilities for interactive data exploration.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-navigation">
+                <button class="project-nav-btn" id="prevProject">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="project-dots" id="projectDots">
+                    <!-- Dots will be added dynamically via JavaScript -->
+                </div>
+                <button class="project-nav-btn" id="nextProject">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="recommendations">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Recommendations</h2>
+                <p>What people say about my work</p>
+            </div>
+            <div class="recommendations-grid" id="recommendationsGrid">
+                <div class="recommendation-card" data-aos="fade-up">
+                    <div class="recommendation-content">
+                        <p class="recommendation-text">Himalay is an exceptional Python developer with expertise in AI, ML, Django, and NLP. Their ability to build robust AI-driven applications and leverage natural language processing to solve complex problems is remarkable.</p>
+                        <div class="recommendation-author">
+                            <img src="https://user-images.githubusercontent.com/76244600/130684066-fb0b5e47-6c93-469e-ba45-7cb62833b965.png" alt="Shayan Shaikh">
+                            <div class="author-info">
+                                <h4>Shayan Shaikh</h4>
+                                <p>Blockchain Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommendation-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="recommendation-content">
+                        <p class="recommendation-text">It has been an absolute pleasure working with Himalay Patel. They have a strong foundation in Python and excel in both backend development and crafting intuitive, responsive user interfaces.</p>
+                        <div class="recommendation-author">
+                            <img src="https://user-images.githubusercontent.com/76244600/130684066-fb0b5e47-6c93-469e-ba45-7cb62833b965.png" alt="Parita Vyas">
+                            <div class="author-info">
+                                <h4>Parita Vyas</h4>
+                                <p>Blockchain specialist | Full stack developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommendation-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="recommendation-content">
+                        <p class="recommendation-text">I'm amazed by Himalay's ability as a developer, a skill he uses to his benefit when making presentations to clients and colleagues. He is a highly focused person as well as analytical and can add to any team he is a part of.</p>
+                        <div class="recommendation-author">
+                            <img src="https://user-images.githubusercontent.com/76244600/130684066-fb0b5e47-6c93-469e-ba45-7cb62833b965.png" alt="Himani Patel">
+                            <div class="author-info">
+                                <h4>Himani Patel</h4>
+                                <p>Software Engineer at IBM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommendation-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="recommendation-content">
+                        <p class="recommendation-text">I have had the distinct pleasure of working alongside Himalay Patel, and I am continually impressed by their expertise across various domains. As a Python developer specializing in AI/ML, they demonstrate a profound understanding of complex algorithms and machine learning models.</p>
+                        <div class="recommendation-author">
+                            <img src="https://user-images.githubusercontent.com/76244600/130684066-fb0b5e47-6c93-469e-ba45-7cb62833b965.png" alt="Fermin Lopez">
+                            <div class="author-info">
+                                <h4>Fermin Lopez</h4>
+                                <p>Student at Goa University</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommendation-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="recommendation-content">
+                        <p class="recommendation-text">Himalaya is not only exceptionally skilled in problem-solving with Python but also possesses a remarkable ability to quickly adapt to new technologies. Their dedication and willingness to assist others make them a true asset to any team.</p>
+                        <div class="recommendation-author">
+                            <img src="https://user-images.githubusercontent.com/76244600/130684066-fb0b5e47-6c93-469e-ba45-7cb62833b965.png" alt="Abhishek Tiwari">
+                            <div class="author-info">
+                                <h4>Abhishek Tiwari</h4>
+                                <p>Senior Software Engineer at Adani</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommendation-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="recommendation-content">
+                        <p class="recommendation-text">He is dedicated towards his work and always keep learning new things and that makes him a very mature developer who is always ready to take challenging task and make sure to deliver it.</p>
+                        <div class="recommendation-author">
+                            <img src="https://user-images.githubusercontent.com/76244600/130684066-fb0b5e47-6c93-469e-ba45-7cb62833b965.png" alt="Nisarg Munjpara">
+                            <div class="author-info">
+                                <h4>Nisarg Munjpara</h4>
+                                <p>Java | Spring Boot | Microservices</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommendation-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="recommendation-content">
+                        <p class="recommendation-text">He is the most profound person I have met, and his ability to tackle any problem is remarkable and with a warm smile. Himalay would become an appreciated member of any team. Any organisation would be lucky to have his on their side.</p>
+                        <div class="recommendation-author">
+                            <img src="https://user-images.githubusercontent.com/76244600/130684066-fb0b5e47-6c93-469e-ba45-7cb62833b965.png" alt="Dhaval Patel">
+                            <div class="author-info">
+                                <h4>Dhaval Patel</h4>
+                                <p>Founder & CEO | Skylink Infosolutions™</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="recommendation-navigation">
+                <button class="recommendation-nav-btn" id="prevRecommendation">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="recommendation-dots" id="recommendationDots">
+                    <!-- Dots will be added dynamically via JavaScript -->
+                </div>
+                <button class="recommendation-nav-btn" id="nextRecommendation">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Contact Me</h2>
+                <p>Get in touch for collaborations or opportunities</p>
+            </div>
+            <div class="contact-content" data-aos="fade-up">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:himalaypatel75@gmail.com">himalaypatel75@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+919624788668">+91 9624788668</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/Himalaypatel75" target="_blank">GitHub Profile</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin-in"></i>
+                        <a href="https://www.linkedin.com/in/himalay-patel-python-dev/" target="_blank">LinkedIn Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>Himalay Patel - Senior Python AI/ML Developer & Full Stack Engineer</p>
+            <div class="footer-social">
+                <a href="mailto:himalaypatel75@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+919624788668"><i class="fas fa-phone"></i></a>
+                <a href="https://github.com/Himalaypatel75"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/himalay-patel-python-dev/"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="copyright">&copy; 2024 Himalay Patel. All rights reserved.</p>
+        </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.querySelector('nav ul').classList.remove('show');
+                }
+            });
+        });
+        
+        // Project navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const projectsGrid = document.getElementById('projectsGrid');
+            const prevBtn = document.getElementById('prevProject');
+            const nextBtn = document.getElementById('nextProject');
+            const dotsContainer = document.getElementById('projectDots');
+            
+            // Create dots based on number of project cards
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('project-dot');
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => scrollToProject(index));
+                dotsContainer.appendChild(dot);
+            });
+            
+            // Update active dot based on scroll position
+            projectsGrid.addEventListener('scroll', () => {
+                const scrollPosition = projectsGrid.scrollLeft;
+                const cardWidth = projectCards[0].offsetWidth + 32; // Width + gap
+                const currentIndex = Math.round(scrollPosition / cardWidth);
+                
+                document.querySelectorAll('.project-dot').forEach((dot, index) => {
+                    if (index === currentIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            });
+            
+            // Scroll to specific project
+            function scrollToProject(index) {
+                const cardWidth = projectCards[0].offsetWidth + 32; // Width + gap
+                projectsGrid.scrollTo({
+                    left: index * cardWidth,
+                    behavior: 'smooth'
+                });
+            }
+            
+            // Previous button click
+            prevBtn.addEventListener('click', () => {
+                const scrollPosition = projectsGrid.scrollLeft;
+                const cardWidth = projectCards[0].offsetWidth + 32; // Width + gap
+                const currentIndex = Math.floor(scrollPosition / cardWidth);
+                
+                if (currentIndex > 0) {
+                    scrollToProject(currentIndex - 1);
+                }
+            });
+            
+            // Next button click
+            nextBtn.addEventListener('click', () => {
+                const scrollPosition = projectsGrid.scrollLeft;
+                const cardWidth = projectCards[0].offsetWidth + 32; // Width + gap
+                const currentIndex = Math.floor(scrollPosition / cardWidth);
+                
+                if (currentIndex < projectCards.length - 1) {
+                    scrollToProject(currentIndex + 1);
+                }
+            });
+            
+            // Recommendations navigation
+            const recommendationsGrid = document.getElementById('recommendationsGrid');
+            const prevRecBtn = document.getElementById('prevRecommendation');
+            const nextRecBtn = document.getElementById('nextRecommendation');
+            const recDotsContainer = document.getElementById('recommendationDots');
+            
+            // Create dots based on number of recommendation cards
+            const recommendationCards = document.querySelectorAll('.recommendation-card');
+            recommendationCards.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('recommendation-dot');
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => scrollToRecommendation(index));
+                recDotsContainer.appendChild(dot);
+            });
+            
+            // Update active dot based on scroll position
+            recommendationsGrid.addEventListener('scroll', () => {
+                const scrollPosition = recommendationsGrid.scrollLeft;
+                const cardWidth = recommendationCards[0].offsetWidth + 32; // Width + gap
+                const currentIndex = Math.round(scrollPosition / cardWidth);
+                
+                document.querySelectorAll('.recommendation-dot').forEach((dot, index) => {
+                    if (index === currentIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            });
+            
+            // Scroll to specific recommendation
+            function scrollToRecommendation(index) {
+                const cardWidth = recommendationCards[0].offsetWidth + 32; // Width + gap
+                recommendationsGrid.scrollTo({
+                    left: index * cardWidth,
+                    behavior: 'smooth'
+                });
+            }
+            
+            // Previous recommendation button click
+            prevRecBtn.addEventListener('click', () => {
+                const scrollPosition = recommendationsGrid.scrollLeft;
+                const cardWidth = recommendationCards[0].offsetWidth + 32; // Width + gap
+                const currentIndex = Math.floor(scrollPosition / cardWidth);
+                
+                if (currentIndex > 0) {
+                    scrollToRecommendation(currentIndex - 1);
+                }
+            });
+            
+            // Next recommendation button click
+            nextRecBtn.addEventListener('click', () => {
+                const scrollPosition = recommendationsGrid.scrollLeft;
+                const cardWidth = recommendationCards[0].offsetWidth + 32; // Width + gap
+                const currentIndex = Math.floor(scrollPosition / cardWidth);
+                
+                if (currentIndex < recommendationCards.length - 1) {
+                    scrollToRecommendation(currentIndex + 1);
+                }
+            });
+            
+            // Auto-scroll recommendations every 3 seconds
+            let recommendationInterval;
+            
+            function startRecommendationAutoScroll() {
+                recommendationInterval = setInterval(() => {
+                    const scrollPosition = recommendationsGrid.scrollLeft;
+                    const cardWidth = recommendationCards[0].offsetWidth + 32; // Width + gap
+                    const currentIndex = Math.floor(scrollPosition / cardWidth);
+                    
+                    if (currentIndex < recommendationCards.length - 1) {
+                        scrollToRecommendation(currentIndex + 1);
+                    } else {
+                        // If at the end, go back to the beginning
+                        scrollToRecommendation(0);
+                    }
+                }, 3000);
+            }
+            
+            function stopRecommendationAutoScroll() {
+                clearInterval(recommendationInterval);
+            }
+            
+            // Start auto-scroll when page loads
+            startRecommendationAutoScroll();
+            
+            // Pause auto-scroll when user interacts with navigation
+            recommendationsGrid.addEventListener('mouseenter', stopRecommendationAutoScroll);
+            prevRecBtn.addEventListener('click', stopRecommendationAutoScroll);
+            nextRecBtn.addEventListener('click', stopRecommendationAutoScroll);
+            recDotsContainer.addEventListener('click', stopRecommendationAutoScroll);
+            
+            // Resume auto-scroll when user stops interacting
+            recommendationsGrid.addEventListener('mouseleave', startRecommendationAutoScroll);
+        });
+    </script>
 </body>
 </html>
